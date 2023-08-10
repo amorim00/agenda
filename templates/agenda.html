@@ -1,0 +1,39 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="container col-12 mt-2 bg-dark text-white py-3">
+    <h2 class="fs-2 text-center">Agendamentos</h2>
+  </div>
+  
+  
+  <div class="row">
+    <div class="col">
+      <h3 class="fs-3 mt-2">Usuário</h3>
+      <ul class="list-group fs-4">
+        {% for evento in eventos %}
+          <li class="list-group-item">{{ evento.usuario }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <div class="col">
+      <h3 class="fs-3 mt-2">Título</h3>
+      <ul class="list-group fs-4">
+        {% for evento in eventos %}
+          <li class="list-group-item">{{ evento.titulo }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    
+    <div class="col">
+      <h3 class="fs-3 mt-2">Data do Evento</h3>
+      <ul class="list-group fs-4">
+        {% for evento in eventos %}
+          <li class="list-group-item">{{ evento.get_data_evento }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
