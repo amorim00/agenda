@@ -1,7 +1,7 @@
 {% extends "model-page.html" %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container mt-3">
   <div class="container col-12 mt-2 bg-dark text-white py-3">
     <h2 class="fs-2 text-center">Agendamentos</h2>
   </div>
@@ -24,6 +24,11 @@
         {% endfor %}
       </ul>
     </div>
+  </div>
+  <div class="mt-3">
+    <a href="evento/">
+      <button type="button" class="btn btn-dark">Novo Evento</button>
+    </a>
   </div>
 </div>
 {% endblock %}
