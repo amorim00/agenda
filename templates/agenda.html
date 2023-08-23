@@ -15,12 +15,30 @@
         {% endfor %}
       </ul>
     </div>
-    
+    <div class="col">
+      <h3 class="fs-3 mt-2">Descrição</h3>
+      <ul class="list-group fs-4">
+        {% for evento in eventos %}
+          <li class="list-group-item">{{ evento.descricao }}</li>
+        {% endfor %}
+      </ul>
+    </div>
     <div class="col">
       <h3 class="fs-3 mt-2">Data do Evento</h3>
       <ul class="list-group fs-4">
         {% for evento in eventos %}
           <li class="list-group-item">{{ evento.get_data_evento }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="col">
+      <h3 class="fs-3 mt-2">Opções</h3>
+      <ul class="list-group fs-4">
+        {% for evento in eventos %}
+          <li class="list-group-item">
+            { <a href="evento/?id={{ evento.id }}">Editar</a> 
+            / <a href="evento/delete/{{ evento.id }}">Excluir</a> }
+          </li>
         {% endfor %}
       </ul>
     </div>
